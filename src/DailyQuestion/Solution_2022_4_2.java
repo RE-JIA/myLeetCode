@@ -1,12 +1,11 @@
 package DailyQuestion;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Solution_2022_4_2 {
     /*
-
+        420 强密码检测器
      */
     public static int strongPasswordChecker(String password){
         //n:应处理的字符长度
@@ -75,8 +74,9 @@ public class Solution_2022_4_2 {
             }
             return Math.max(ans,requireChar);
         }else{
-            /* n>20时情况较为复杂
-
+            /* n>20时情况较为复杂，先确定需要删的字符数，首先找出连续相等字符数是3的倍数的，先减一，
+                其次找出%3 == 1的，减2.
+                最后 %3 == 2的，减3
              */
             int limit = n -20;
             int ans = 0;
